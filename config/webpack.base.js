@@ -3,6 +3,7 @@ const { getWebpackEntries } = require('./utils/getWebpackEntries');
 const { resolve } = require('./utils/resolve');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 const os = require('os');
 const clientRoot = resolve('src');
@@ -67,6 +68,12 @@ const generate = (isOptimization = false) => {
                 filename: 'css/[name].[contenthash:8].css',
                 chunkFilename: 'css/[id][name].[contenthash:8].chunk.css',
             }),
+            // new workboxPlugin.InjectManifest({
+            //     // 目前的service worker 文件
+            //     swSrc: resolve('src/sw.js'),
+            //     // 打包后生成的service worker文件，一般存到disk目录
+            //     swDest: 'sw.js',
+            // }),
         ],
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
