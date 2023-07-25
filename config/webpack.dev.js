@@ -27,7 +27,6 @@ const config = {
         //         pathRewrite: { '^/api/question': '' },
         //         changeOrigin: true,
         //     },
-
         // },
     },
     plugins: [...basePlugins, new DotenvWebpackPlugin({ path: resolve('.env') })],

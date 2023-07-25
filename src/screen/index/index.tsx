@@ -44,7 +44,7 @@ export const Index: FC = () => {
     }, [setTextVideoSrc]);
 
     const onPlayText = useCallback(() => {
-        axios.post('http://localhost:3000/api/question').then((data) => {
+        axios.post('https://dev-api.villaland.cn/static/json/2.json').then((data) => {
             console.log('data: ', data);
         });
         setinputText('');
