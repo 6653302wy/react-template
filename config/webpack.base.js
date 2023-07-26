@@ -3,7 +3,6 @@ const { getWebpackEntries } = require('./utils/getWebpackEntries');
 const { resolve } = require('./utils/resolve');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 const os = require('os');
 const clientRoot = resolve('src');
@@ -11,9 +10,10 @@ const clientRoot = resolve('src');
 /**
  * genrate webpack config
  * @param isOptimization {boolean}
+ * @publicpath same with .env file of ROUTER_BASE
  * @returns {import("webpack-dev-server").WebpackConfiguration}
  */
-const generate = (isOptimization = false) => {
+const generate = (isOptimization = false, publicpath = '') => {
     console.log(`webpack build, isOptimization:${isOptimization}`);
     /**
      * @type {import("webpack").EntryObject}
@@ -45,7 +45,7 @@ const generate = (isOptimization = false) => {
             filename: `${entry.entryName}.html`,
             template: entry.html,
             chunks: entryName ? ['vendor', entryName] : [],
-            publicPath: isOptimization ? '/admin' : '',
+            publicPath: publicpath,
             favicon: resolve('src/favicon.ico'),
         };
         htmlPlugins.push(new HtmlWebpackPlugin(htmlPluginOptions));
@@ -54,7 +54,7 @@ const generate = (isOptimization = false) => {
     // html plugins
     return {
         mode: isOptimization ? 'production' : 'development',
-        devtool: 'source-map', //isOptimization ? false : 'source-map',
+        devtool: isOptimization ? false : 'source-map',
         entry: entries,
         output: {
             path: resolve('dist'),
@@ -68,12 +68,6 @@ const generate = (isOptimization = false) => {
                 filename: 'css/[name].[contenthash:8].css',
                 chunkFilename: 'css/[id][name].[contenthash:8].chunk.css',
             }),
-            // new workboxPlugin.InjectManifest({
-            //     // 目前的service worker 文件
-            //     swSrc: resolve('src/sw.js'),
-            //     // 打包后生成的service worker文件，一般存到disk目录
-            //     swDest: 'sw.js',
-            // }),
         ],
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],

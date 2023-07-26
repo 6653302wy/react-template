@@ -1,82 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @tailwind screens; */
+@tailwind screens;
 
 /* 全局变量配置 */
 :root {
-    /* 主题色 */
-    --color-primary: #217bff;
-    --color-primary-hover: #4998ff;
-    --color-primary-active: #145ad2;
-    --color-primary-other: #71b3ff;
-    --color-primary-disable: #98ccff;
-    --color-primary-text-disable: #c0e2ff;
-    --color-primary-white: #e8f5ff;
-
-    /* 线条色 */
-    --color-line-light: #f7f8fa;
-    --color-line-base: #f1f2f6;
-    --color-line-gray: #e0e3eb;
-    --color-line-dark: #bdc3d4;
-
-    /* 填充色 */
-    --color-fill-white: #ffffff;
-    --color-fill-light: #f7f8fa;
-    --color-fill-base: #f1f2f6;
-    --color-fill-gray: #e0e3eb;
-    --color-fill-dark: #bdc3d4;
-
-    /* 文字色 */
-    --color-text-white: #ffffff;
-    --color-text-base: #22232a;
-    --color-text-secondary: #464855;
-    --color-text-light: #9498aa;
-    --color-text-gray: #bdc3d4;
-
-    /* 背景色 */
-    --color-bg-white: #ffffff;
-    --color-bg-base: #f2f6fa;
-    --color-bg-muted: #f7f8fa;
-
-    /* 警告色 */
-    --color-warn-base: #ff7d00;
-    --color-warn-hover: #ff9a2e;
-    --color-warn-active: #d25f00;
-    --color-warn-other: #ffb65d;
-    --color-warn-disable: #ffcf8b;
-    --color-warn-text-disable: #ffe4ba;
-    --color-warn-white: #fff7e8;
-
-    /* 成功色 */
-    --color-success-base: #00b42a;
-    --color-success-hover: #23c343;
-    --color-success-active: #009a29;
-    --color-success-other: #4cd263;
-    --color-success-disable: #7be188;
-    --color-success-text-disable: #aff0b5;
-    --color-success-white: #e8ffea;
-
-    /* 错误色 */
-    --color-error-base: #f53f3f;
-    --color-error-hover: #f76560;
-    --color-error-active: #cb272d;
-    --color-error-other: #f98981;
-    --color-error-disable: #fbaca3;
-    --color-error-text-disable: #fdcdc5;
-    --color-error-white: #ffece8;
-
-    /* 链接色 */
-    --color-link-base: #217bff;
-    --color-link-hover: #4998ff;
-    --color-link-active: #145ad2;
-    --color-link-other: #71b3ff;
-    --color-link-disable: #98ccff;
-    --color-link-text-disable: #c0e2ff;
-    --color-link-white: #e8f5ff;
-
     /* 字体，字号配置 */
-    --font-family: '-apple-system,BlinkMacSystemFont,Helvetica Neue,Tahoma,PingFang SC,Roboto,Microsoft Yahei,Microsoft Jhenghei,Arial,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji';
     --text-xxs: 12px;
     --text-xs: 13px;
     --text-base: 14px;
@@ -125,21 +54,13 @@
     --shadow-3-bottom-left: '-8px 8px 20px rgba(0, 0, 0, 0.1)';
     --shadow-3-top-right: '8px -8px 20px rgba(0, 0, 0, 0.1)';
     --shadow-3-bottom-right: '8px 8px 20px rgba(0, 0, 0, 0.1)';
-
-    /* 组件尺寸 分4种 */
-    --size-comp-mini: 28px;
-    --size-comp-sm: 32px;
-    --size-comp-base: 36px;
-    --size-comp-lg: 48px;
 }
-
-/* 主题theme配置 */
 
 * {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: var(--font-family);
+    font-family: '-apple-system,BlinkMacSystemFont,Helvetica Neue,Tahoma,PingFang SC,Roboto,Microsoft Yahei,Microsoft Jhenghei,Arial,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji';
 }
 
 *:not(input):not(textarea) {
@@ -154,7 +75,6 @@ html {
 
 body {
     -webkit-text-size-adjust: none !important;
-    min-width: 1024px;
 }
 
 a {

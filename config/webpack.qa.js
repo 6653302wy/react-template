@@ -3,7 +3,8 @@ const { WebpackConfiguration } = require('webpack-dev-server');
 const { resolve } = require('./utils/resolve');
 const { generate } = require('./webpack.base');
 
-const base = generate(true);
+// 此处的publicpath 与 .env对应的环境内 ROUTER_BASE 一致
+const base = generate(true, '/qa');
 const basePlugins = base.plugins;
 
 /**
