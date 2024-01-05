@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "dependencies": {
+    "@6653302wy/ts-utils": "^1.0.1",
     "@svgr/webpack": "^7.0.0",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.7",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-runtime": "^7.18.10",
     "@shm-open/eslint-config-bundle": "^1.9.13",
     "@types/dotenv-webpack": "^7.0.3",
