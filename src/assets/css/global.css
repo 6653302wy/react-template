@@ -6,23 +6,12 @@
 /* 全局变量配置 */
 :root {
     /* 字体，字号配置 */
-    --text-xxs: 12px;
-    --text-xs: 13px;
-    --text-base: 14px;
-    --text-title: 16px;
     --text-18: 18px;
     --text-20: 20px;
     --text-24: 24px;
     --text-36: 36px;
     --text-48: 48px;
     --text-56: 56px;
-
-    /* 圆角 */
-    --round-none: 0;
-    --round-base: 4px;
-    --round-md: 6px;
-    --round-lg: 8px;
-    --rounded: 50%;
 
     /* 投影 按投影面积从小到大 */
     --shadow-1-center: '0 0 5px rgba(0, 0, 0, 0.1)';
@@ -60,7 +49,9 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: '-apple-system,BlinkMacSystemFont,Helvetica Neue,Tahoma,PingFang SC,Roboto,Microsoft Yahei,Microsoft Jhenghei,Arial,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji';
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Tahoma, 'PingFang SC', Roboto,
+        Microsoft Yahei, 'Microsoft Jhenghei', Arial, 'Hiragino Sans GB', 'sans-serif',
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 *:not(input):not(textarea) {
@@ -107,8 +98,7 @@ input {
 
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    display: none;
 }
 
 /* 滚动槽 */
@@ -141,5 +131,13 @@ input {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/** 3行文本加省略号  **/
+.text-ellipsis-multiple_3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     overflow: hidden;
 }

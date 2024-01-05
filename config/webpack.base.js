@@ -25,7 +25,14 @@ const generate = (isOptimization = false, publicpath = '') => {
     const htmlPlugins = [];
 
     // vendor entry
-    entries['vendor'] = ['react', 'react-dom'];
+    entries['vendor'] = [
+        'react',
+        'react-dom',
+        'react-router',
+        'react-router-dom',
+        'dayjs',
+        'classnames',
+    ];
 
     // html entries
     const rawEntries = getWebpackEntries(clientRoot);
@@ -171,6 +178,25 @@ const generate = (isOptimization = false, publicpath = '') => {
             ],
         },
         optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendors: {
+                        //拆分第三方库（通过npm|yarn安装的库）
+                        test: /\/node_modules\/(?!react|react-dom|react-router|react-router-dom｜dayjs｜classnames).*/,
+                        name: 'libs',
+                        chunks: 'initial',
+                        priority: -10,
+                        reuseExistingChunk: true,
+                    },
+                    default: {
+                        name: 'common',
+                        chunks: 'initial',
+                        minChunks: 2, //模块被引用2次以上的才抽离
+                        priority: -20,
+                        reuseExistingChunk: true,
+                    },
+                },
+            },
             minimize: isOptimization,
             minimizer: isOptimization
                 ? [

@@ -1,12 +1,12 @@
 {
   "name": "react-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "react app template with react-router, tailwindcss and more",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist/",
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
-    "build:dev": "cross-env NODE_ENV=production webpack --config config/webpack.qa.js",
+    "build:qa": "cross-env NODE_ENV=production webpack --config config/webpack.qa.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "analyzer": "webpack --config config/webpack.analyzer.js --progress",
     "lint": "eslint src/ --fix"
@@ -14,15 +14,10 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "@arco-design/web-react": "^2.50.2",
-    "@shm-open/utilities": "^1.13.3",
     "@svgr/webpack": "^7.0.0",
-    "ahooks": "^3.7.6",
-    "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.7",
     "react": "^18.2.0",
-    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1"
@@ -34,7 +29,6 @@
     "@types/dotenv-webpack": "^7.0.3",
     "@types/node": "^18.7.14",
     "@types/react": "^18.0.18",
-    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",

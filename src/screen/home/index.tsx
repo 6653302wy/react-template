@@ -1,7 +1,7 @@
-import { Button } from '@arco-design/web-react';
 import { FC, useCallback } from 'react';
 import { useNavigate } from 'react-router';
 import { RouterEnum } from '../../router/constans';
+import style from './styles.scss';
 
 export const Home: FC = () => {
     const navigate = useNavigate();
@@ -12,10 +12,12 @@ export const Home: FC = () => {
 
     return (
         <div className=" w-screen h-screen flex flex-col items-center justify-center">
-            <p className="text-[24px] mb-6">hello, welcome 👋 !!! click button to jump router of login👇️ </p>
-            <Button size="large" type="primary" onClick={tologin}>
+            <p className="text-[24px] mb-6">
+                hello, welcome 👋 !!! click button to jump router of login👇️{' '}
+            </p>
+            <button onClick={tologin} className={style.btn}>
                 jump to login
-            </Button>
+            </button>
         </div>
     );
 };

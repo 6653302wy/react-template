@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['@shm-open/eslint-config-bundle'],
+    extends: ['@shm-open/eslint-config-bundle/react'],
     plugins: ['react-hooks'],
     rules: {
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
