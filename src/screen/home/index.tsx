@@ -1,5 +1,6 @@
 import { FC, useCallback } from 'react';
 import { useNavigate } from 'react-router';
+import { config } from '../../config';
 import { RouterEnum } from '../../router/constans';
 import style from './styles.scss';
 
@@ -12,11 +13,14 @@ export const Home: FC = () => {
 
     return (
         <div className=" w-screen h-screen flex flex-col items-center justify-center">
+            <p className="text-[24px] mb-6">Hello, welcome 👋 !!!</p>
             <p className="text-[24px] mb-6">
-                hello, welcome 👋 !!! click button to jump router of login👇️{' '}
+                {`Now your code ENV is `}
+                <span className="text-[#FFD560]">{config.env} </span>
             </p>
+            <p className="text-[24px] mb-6">Click the button below to jump router of login👇️</p>
             <button onClick={tologin} className={style.btn}>
-                jump to login
+                to login
             </button>
         </div>
     );

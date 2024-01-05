@@ -1,4 +1,4 @@
-# react-template 前端项目脚手架
+# react-template 前端项目脚手架, 开箱即用
 
 ### 支持多页面和单页面；支持 css module； 支持 css,less,sass 和 tailwindcss 多种样式写法
 
