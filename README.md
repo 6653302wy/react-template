@@ -1,5 +1,5 @@
 # react-template 
-A front-end react project scaffolding
+A front-end react project scaffolding by typescript
 
 ### Contain
 - support single page and multi-entry projects
