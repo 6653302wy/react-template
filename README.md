@@ -1,4 +1,4 @@
-# react-template 
+# react-template
 A front-end react project scaffolding by typescript
 
 ### Contain
@@ -10,4 +10,4 @@ A front-end react project scaffolding by typescript
 - react-router: contains several examples
 - dayjs
 - classnames
-- @6653302wy/ts-utils (aother utils's lib of mine😊)
+- @6653302wy/ts-utils (another utils's lib of mine😊)
