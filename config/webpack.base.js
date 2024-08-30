@@ -172,8 +172,7 @@ const generate = (isOptimization = false, publicpath = '') => {
                 {
                     test: /\.svg$/i,
                     issuer: /\.[jt]sx?$/,
-                    resourceQuery: { not: [/url/] },
-                    use: ['@svgr/webpack'],
+                    use: ['@svgr/webpack', 'url-loader'],
                 },
             ],
         },
